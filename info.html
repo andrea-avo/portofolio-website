@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/clear-sans" rel="stylesheet" />
+    <link rel="stylesheet" href="css/info.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white overflow-x-hidden font-sans">
+    <header
+      class="fixed top-0 w-full px-[50px] py-[30px] flex justify-between items-center z-[100]"
+    >
+      <div class="font-extrabold tracking-[2px] text-[0.7rem] uppercase">
+        System Overview
+      </div>
+      <a
+        href="index.html"
+        class="no-underline text-white text-2xl font-extralight"
+        >✕</a
+      >
+    </header>
+
+    <div
+      class="fixed left-10 top-1/2 -translate-y-1/2 w-[1px] h-[100px] bg-scroll-bg z-[100]"
+    >
+      <div
+        id="progress"
+        class="w-full h-0 bg-white transition-all duration-500 ease-linear"
+      ></div>
+    </div>
+
+    <div class="bg-container fixed top-0 left-0 w-full h-screen -z-10">
+      <img src="img/interface/morning.png" id="img-morning" class="active" />
+      <img src="img/interface/afternoon.png" id="img-afternoon" />
+      <img src="img/interface/evening.png" id="img-evening" />
+      <img src="img/interface/night.png" id="img-night" />
+    </div>
+
+    <main>
+      <section
+        data-time="morning"
+        class="h-screen flex flex-col justify-center items-start px-[10%] relative"
+      >
+        <div class="text-reveal max-w-[500px] z-10">
+          <h2 class="text-base font-semibold">Morning</h2>
+          <h1
+            class="text-[clamp(2.2rem,6vw,3rem)] font-extrabold -tracking-[1.5px] leading-[1.1]"
+          >
+            05.00 - 11.00 WIB
+          </h1>
+        </div>
+      </section>
+
+      <section
+        data-time="afternoon"
+        class="h-screen flex flex-col justify-center items-start px-[10%] relative"
+      >
+        <div class="text-reveal max-w-[500px] z-10">
+          <h2 class="text-base font-semibold">Afternoon</h2>
+          <h1
+            class="text-[clamp(2.2rem,6vw,3rem)] font-extrabold -tracking-[1.5px] leading-[1.1]"
+          >
+            11.00 - 15.00 WIB
+          </h1>
+        </div>
+      </section>
+
+      <section
+        data-time="evening"
+        class="h-screen flex flex-col justify-center items-start px-[10%] relative"
+      >
+        <div class="text-reveal max-w-[500px] z-10">
+          <h2 class="text-base font-semibold">Evening</h2>
+          <h1
+            class="text-[clamp(2.2rem,6vw,3rem)] font-extrabold -tracking-[1.5px] leading-[1.1]"
+          >
+            15.00 - 18.00 WIB
+          </h1>
+        </div>
+      </section>
+
+      <section
+        data-time="night"
+        class="h-screen flex flex-col justify-center items-start px-[10%] relative"
+      >
+        <div class="text-reveal max-w-[500px] z-10">
+          <h2 class="text-base font-semibold">Night</h2>
+          <h1
+            class="text-[clamp(2.2rem,6vw,3rem)] font-extrabold -tracking-[1.5px] leading-[1.1]"
+          >
+            18.00 - 05.00 WIB
+          </h1>
+        </div>
+        <footer
+          class="absolute bottom-10 left-0 w-full flex items-center justify-center text-[9px] font-semibold tracking-[4px] z-20"
+        >
+          © <span id="year" class="mx-1"></span> ANDREA WEB
+        </footer>
+      </section>
+    </main>
+
+    <script src="js/info.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+.bg-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  will-change: opacity;
+}
+.bg-container img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.text-reveal {
+  overflow: hidden;
+}
+.text-reveal h1,
+.text-reveal h2 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
+}
+
+section.is-visible .text-reveal h2 {
+  opacity: 0.6;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+section.is-visible .text-reveal h1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}

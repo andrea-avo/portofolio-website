@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/clear-sans" rel="stylesheet" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <header
+      class="fixed top-0 w-full px-[25px] py-[30px] flex justify-between items-center z-50 pointer-events-none"
+    >
+      <div class="w-[24px]"></div>
+      <h1
+        class="text-[14px] md:text-[16px] font-bold tracking-[3px] uppercase bg-transparent px-4 py-1 pointer-events-auto"
+      >
+        Contact
+      </h1>
+      <a
+        href="index.html"
+        class="no-underline text-slate-300 text-[24px] font-light transition-transform hover:rotate-90 hover:text-slate-800 bg-transparent w-10 h-10 flex items-center justify-center pointer-events-auto"
+        >✕</a
+      >
+    </header>
+
+    <div class="table-area">
+      <div id="card-grid" class="grid grid-cols-4 gap-3 md:gap-6 p-4"></div>
+    </div>
+
+    <footer class="fixed bottom-8 w-full text-center pointer-events-none">
+      <p
+        class="text-[10px] font-bold uppercase tracking-[2px] bg-transparent px-4 py-2 inline-block"
+      >
+        © <span id="year"></span> ANDREA WEB
+      </p>
+    </footer>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

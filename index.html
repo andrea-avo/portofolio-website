@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrea Virgil Ofian</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/clear-sans" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.9.0/suncalc.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div id="loadingScreen">
+      <div class="loader-content">
+        <div class="loader-text">
+          <span class="text-label">LOADING...</span>
+          <span class="text-percent" id="loadingPercent">0%</span>
+        </div>
+        <div class="progress-bar-border">
+          <div class="progress-bar-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sky-container">
+      <div class="sun-mover"><div class="realistic-sun"></div></div>
+
+      <div class="shooting-stars-wrapper" id="shootingStarsContainer"></div>
+
+      <div class="moon-mover">
+        <div class="realistic-moon" id="moonElement">
+          <div class="moon-phase-shadow" id="moonShadow"></div>
+        </div>
+      </div>
+
+      <div class="stars-wrapper">
+        <div class="star-layer star-s"></div>
+        <div class="star-layer star-m"></div>
+      </div>
+
+      <div class="clouds-container" id="cloudsContainer"></div>
+
+      <div class="birds-container" id="birdsContainer"></div>
+    </div>
+
+    <div class="landscape-container">
+      <div class="hill"></div>
+      <div class="hill-2"></div>
+    </div>
+
+    <div class="copyright-text">© <span id="year"></span> ANDREA WEB</div>
+
+    <div class="sidebar">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="icon-box"><a href="profile.html"><i class="far fa-user"></i></a></div>
+          <span class="menu-label">Profile</span></a>
+        </div>
+
+        <div class="menu-item">
+          <div class="icon-box"><a href="contact.html"><i class="far fa-address-book"></i></a></div>
+          <span class="menu-label">Contact</span></a>
+        </div>
+ 
+        <div class="menu-item">
+          <div class="icon-box"><a href="showcase.html"><i class="fas fa-briefcase"></i></a></div>
+          <span class="menu-label">Showcase</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="icon-box"><a href="info.html"><i class="fas fa-info"></i></a></div>
+          <span class="menu-label">Info</span>
+        </div>
+
+        <div class="menu-item" id="btnMusic">
+          <div class="icon-box"><i class="fas fa-music" id="musicIcon"></i></div>
+          <span class="menu-label" id="musicLabel">Play Music</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="audioContainer" style="display: none;">
+      <audio id="bgm-morning" loop><source src="audio/whatssmooth - A Spring Morning 440097.mp3" type="audio/mpeg"></audio>
+      <audio id="bgm-afternoon" loop><source src="audio/vjazz relaxing - A Retro Vibe Thatx27s Perfect for a Relaxing Afternoon Jazz bgm 232823.mp3" type="audio/mpeg"></audio>
+      <audio id="bgm-evening" loop><source src="audio/clavier music - Golden Sunset Piano Music 200136.mp3" type="audio/mpeg"></audio>
+      <audio id="bgm-night" loop><source src="audio/pianocafe kumi - Relaxing Pianopink Moon 325938.mp3" type="audio/mpeg"></audio>
+    </div>
+
+    <div class="center-content">
+      <div class="clock-container">
+        <div class="time-wrapper">
+          <div class="clock" id="clock">00:00</div>
+          <span class="wib-label">WIB</span>
+        </div>
+        <div class="date-display" id="date">Memuat Tanggal...</div>
+      </div>
+    </div>
+
+    <div class="right-content">
+      <div class="main-frame">
+        <div class="village-container">
+          <div
+            class="tree"
+            style="transform: scale(0.6) translateY(-30px); z-index: 1"
+          >
+            <div class="tree-top"></div>
+            <div class="tree-mid"></div>
+            <div class="tree-trunk"></div>
+          </div>
+          <div
+            class="house"
+            style="transform: scale(0.75) translateY(-15px); z-index: 2"
+          >
+            <div class="roof"></div>
+            <div class="walls"><div class="window"></div></div>
+          </div>
+          <div
+            class="tree"
+            style="transform: scale(0.9) translateY(10px); z-index: 6"
+          >
+            <div class="tree-top"></div>
+            <div class="tree-mid"></div>
+            <div class="tree-trunk"></div>
+          </div>
+          <div class="house" style="transform: scale(0.95); z-index: 4">
+            <div class="roof"></div>
+            <div class="walls"><div class="window"></div></div>
+          </div>
+          <div
+            class="house"
+            style="transform: scale(0.65) translateY(-15px); z-index: 1"
+          >
+            <div class="roof"></div>
+            <div class="walls"><div class="window"></div></div>
+          </div>
+          <div
+            class="tree"
+            style="transform: scale(1.1) translateY(-10px); z-index: 3"
+          >
+            <div class="tree-top"></div>
+            <div class="tree-mid"></div>
+            <div class="tree-trunk"></div>
+          </div>
+          <div
+            class="house"
+            style="transform: scale(0.9) translateY(15px); z-index: 6"
+          >
+            <div class="roof"></div>
+            <div class="walls"><div class="window"></div></div>
+          </div>
+          <div class="tree" style="transform: scale(0.8); z-index: 4">
+            <div class="tree-top"></div>
+            <div class="tree-mid"></div>
+            <div class="tree-trunk"></div>
+          </div>
+          <div
+            class="tower-structure"
+            style="transform: scale(1.1) translateY(-5px); z-index: 7"
+          >
+            <div class="tower-top-piece"></div>
+            <div class="tower-body-piece">
+              <div class="tower-light-piece"></div>
+            </div>
+            <div class="tower-body-piece">
+              <div class="tower-light-piece"></div>
+            </div>
+            <div class="tower-body-piece">
+              <div class="tower-light-piece"></div>
+            </div>
+            <div class="tower-bottom-piece"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

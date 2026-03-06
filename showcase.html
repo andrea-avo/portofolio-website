@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/clear-sans" rel="stylesheet" />
+    <link rel="stylesheet" href="css/showcase.css" />
+  </head>
+  <body
+    class="bg-slate-50 text-slate-800 min-h-screen selection:bg-slate-200 flex flex-col"
+  >
+    <header
+      class="absolute top-0 w-full px-[25px] py-[30px] flex justify-between items-center z-50 bg-transparent transition-all duration-300"
+    >
+      <div class="w-[24px]"></div>
+      <h1
+        class="text-[14px] md:text-[16px] font-bold tracking-[3px] uppercase text-center"
+      >
+        Showcase
+      </h1>
+      <a
+        href="index.html"
+        class="no-underline text-slate-300 text-[24px] font-light transition-transform duration-300 hover:rotate-90 hover:text-slate-800"
+        >✕</a
+      >
+    </header>
+
+    <main
+      class="flex-1 pt-[100px] px-[20px] md:px-[50px] pb-[50px] max-w-7xl mx-auto w-full"
+    >
+      <div
+        id="filter-container"
+        class="flex flex-wrap justify-center gap-3 mb-12 transition-opacity duration-500"
+      ></div>
+
+      <div
+        id="loader"
+        class="flex flex-col items-center justify-center h-[50vh] gap-4"
+      >
+        <div
+          class="w-10 h-10 border-[3px] border-slate-200 border-t-slate-800 rounded-full animate-spin"
+        ></div>
+        <p
+          class="text-[10px] font-bold text-slate-400 tracking-[2px] uppercase"
+        >
+          Loading Data...
+        </p>
+      </div>
+
+      <div
+        id="gallery"
+        class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      ></div>
+    </main>
+
+    <footer class="py-10 text-center">
+      <p class="text-[10px] font-bold uppercase tracking-[3px]">
+        © <span id="year"></span> ANDREA WEB
+      </p>
+    </footer>
+
+   <script src="js/showcase.js"></script>
+  </body>
+</html>
